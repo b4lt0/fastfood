@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
-
+const userController = require('./controllers/userController');
 var app = express();
 
 require('dotenv').config();
@@ -14,6 +14,7 @@ mongoose
 
 //port
 const port = process.env.PORT;
+
 //listener
 const server = app.listen(port, () =>
     console.log(`Server is running on port : ${port}`));
